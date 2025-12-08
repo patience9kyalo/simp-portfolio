@@ -1,0 +1,33 @@
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: radial-gradient(circle, #000000 50%, #ff0000 93%);
+  ;
+  color: white;
+  padding: 1rem 2rem;
+  box-shadow: 0 2px 4px rgba(170, 3, 3, 0.831);
+
+  a {
+    color: white;
+    text-decoration: none;
+    margin-left: 1.5rem;
+    transition: color 0.3s ease;
+
+    &:hover {
+      color: #000000;
+    }
+
+    &.active {
+      font-weight: bold;
+      border-bottom: 2px solid #3D3B47;
+      padding-bottom: 0.25rem;
+    }
+  }
+
+  .site-title a {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-left: 0;
+  }
+}

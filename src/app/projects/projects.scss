@@ -1,0 +1,56 @@
+$text-color: #FFFFFF;
+$card-bg: #1a1a1a;
+$divider-color: #333;
+$shadow: 0 4px 8px rgba(255, 255, 255, 0.05);
+
+h2 {
+    color: $text-color;
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+
+    .project-card {
+        background: $card-bg;
+        padding: 1.5rem;
+        border-radius: 0;
+        box-shadow: $shadow;
+        transition: transform 0.3s ease;
+        border: 1px solid $divider-color;
+
+        &:hover {
+            transform: translateY(-5px);
+        }
+
+        img {
+            width: 100%;
+            height: auto;
+            border-radius: 0;
+            margin-bottom: 1rem;
+        }
+
+        .tags {
+            span {
+                background: $divider-color;
+                color: $text-color;
+                padding: 0.3rem 0.6rem;
+                border-radius: 4px;
+                margin-right: 0.5rem;
+                font-size: 0.7rem;
+                text-transform: uppercase;
+            }
+        }
+
+        .links {
+            a {
+                color: $text-color;
+                margin-right: 1rem;
+                text-decoration: underline;
+            }
+        }
+    }
+}

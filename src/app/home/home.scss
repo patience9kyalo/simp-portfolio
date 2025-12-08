@@ -1,0 +1,76 @@
+$accent-color: #FFFFFF;
+$card-bg: radial-gradient(circle, #000000 50%, #ff0000 93%);
+$text-color: #000000;
+
+.hero-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 4rem 2rem;
+  min-height: 80vh;
+  background: $card-bg;
+  
+
+  .hero-content {
+    flex: 1;
+    max-width: 600px;
+
+    .intro {
+      font-size: 1.2rem;
+      color: #666;
+    }
+
+    .cta-button {
+      color: $accent-color;
+      border: none;
+      cursor: pointer;
+      font-size: 1rem;
+      font-weight: bold;
+      border-radius: 0;
+      text-transform: uppercase;
+
+      &:hover {
+        opacity: 0.8;
+      }
+    }
+
+  }
+
+  .hero-image {
+    flex: 1;
+    display: flex;
+    justify-content: flex-start;
+    margin-left: 70px;
+
+    img {
+      border-radius: 50%;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+      max-width: 400px;
+      height: auto;
+    }
+  }
+}
+
+
+@media (max-width: 768px) {
+  .hero-section {
+    flex-direction: column;
+    text-align: center;
+    padding: 2rem 1rem;
+
+    .hero-content {
+      h1 {
+        font-size: 2.5rem;
+      }
+    }
+
+    .hero-image {
+      margin-top: 2rem;
+      justify-content: center;
+
+      img {
+        max-width: 250px;
+      }
+    }
+  }
+}
