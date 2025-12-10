@@ -3,10 +3,10 @@
   justify-content: space-between;
   align-items: center;
   background-color: radial-gradient(circle, #000000 50%, #ff0000 93%);
-  ;
   color: white;
   padding: 1rem 2rem;
   box-shadow: 0 2px 4px rgba(170, 3, 3, 0.831);
+  position: relative; 
 
   a {
     color: white;
@@ -29,5 +29,46 @@
     font-size: 1.5rem;
     font-weight: bold;
     margin-left: 0;
+  }
+
+
+  .menu-toggle {
+    display: none; 
+    background: none;
+    border: none;
+    color: white;
+    font-size: 1.5rem;
+    cursor: pointer;
+  }
+}
+
+
+@media (max-width: 768px) {
+  .navbar {
+    .menu-toggle {
+      display: block; 
+    }
+
+    .nav-links {
+      display: none; 
+      flex-direction: column;
+      width: 100%;
+      background-color: #000; 
+      position: absolute;
+      top: 100%; 
+      left: 0;
+      padding: 1rem 0;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+
+      a {
+        margin: 0.5rem 2rem; 
+        text-align: left;
+        margin-left: 0;
+      }
+
+      &.open {
+        display: flex; 
+      }
+    }
   }
 }
