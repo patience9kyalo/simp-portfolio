@@ -1,8 +1,10 @@
 <nav class="navbar">
   <div class="site-title">
     <a routerLink="/">My Portfolio</a>
+  </div>
   <button class="menu-toggle" (click)="toggleMenu()" aria-label="Toggle menu">
-    ☰
+    <span *ngIf="!isMenuOpen">☰</span> 
+    <span *ngIf="isMenuOpen">✕</span> 
   </button>
   <div class="nav-links" [class.open]="isMenuOpen">
     <a routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">Home</a>
@@ -10,5 +12,12 @@
     <a routerLink="/about" routerLinkActive="active">About</a>
     <a routerLink="/contact" routerLinkActive="active">Contact</a>
   </div>
-  </div>
 </nav>
+  
+<!-- Add a main wrapper around your page content to demonstrate the push-down effect -->
+<!-- <main class="page-content"> -->
+  <!-- The rest of your application's content goes here -->
+  <!-- <h1>Welcome to my Portfolio</h1> -->
+  <!-- <p>This content will be pushed down when the menu opens on mobile.</p>
+</main> -->
+
